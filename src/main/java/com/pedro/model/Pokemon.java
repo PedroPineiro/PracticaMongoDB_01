@@ -2,7 +2,7 @@ package com.pedro.model;
 
 public class Pokemon {
 
-    private String name;
+    private String nome;
     private String[] tipo;
     private int nivel;
     private String[] habilidades;
@@ -12,19 +12,19 @@ public class Pokemon {
     }
 
     public Pokemon(String name, String[] tipo, int nivel, String[] habilidades, int id_adestrador) {
-        this.name = name;
+        this.nome = name;
         this.tipo = tipo;
         this.nivel = nivel;
         this.habilidades = habilidades;
         this.id_adestrador = id_adestrador;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String[] getTipo() {
