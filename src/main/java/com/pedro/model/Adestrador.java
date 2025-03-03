@@ -61,12 +61,12 @@ public class Adestrador {
             ObjectMapper objectMapper = new ObjectMapper();
             com.pedro.model.Adestrador adestrador = objectMapper.readValue(json, com.pedro.model.Adestrador.class);
 
-            collection = database.getCollection("trainers"); // Nombre de la colección
+            collection = database.getCollection("adestradores"); // Nombre de la colección
 
             // Convertir el objeto Trainer a un Document de MongoDB
-            Document doc = new Document("name", adestrador.getNome())
-                    .append("age", adestrador.getIdade())
-                    .append("city", adestrador.getCidade());
+            Document doc = new Document("nome", adestrador.getNome())
+                    .append("idade", adestrador.getIdade())
+                    .append("cidade", adestrador.getCidade());
 
             // Insertar el documento en la colección
             collection.insertOne(doc);
